@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <style>body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+    }
+    
+    .logo-container {
+        opacity: 0;
+        transform: scale(0.5);
+        transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    }
+    
+    .logo-container.loaded {
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+    .logo {
+        width: 100px;
+        height: auto;
+    }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="./dfi02s.png" alt="Logo" class="logo">
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            document.querySelector('.logo-container').classList.add('loaded');
+        });
+    </script>
+    
+    </body>
+</html>
